@@ -5,13 +5,21 @@
 @media (max-width:1440px) {
 
   html .b-welcome {
-    background: url(../media/content/b-welcome/bg-1.jpg) 150% 50% no-repeat;
+    /* background: url(../media/content/b-main-slider/bg-1.jpg) 150% 50% no-repeat; */
   }
 
   html .b-bnr-3__title {
     max-width: 535px;
     text-align: center;
     display: inline-block;
+  }
+
+  .b-bnr.bg-dark .b-bnr__main, .b-bnr.bg-dark .b-bnr__second, .b-bnr.bg-dark .b-bnr__second .b-bnr-contacts{
+    text-align: center;
+  }
+
+  .b-bnr.bg-dark .b-bnr__second .b-bnr-contacts {
+    margin-left: 0;
   }
 
 }
@@ -191,7 +199,7 @@
 
   .b-welcome,
   .section-about {
-    background: none !important;
+    /* background: none !important; */
   }
 
   .b-bnr__second {

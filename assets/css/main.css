@@ -3619,8 +3619,9 @@ body {
 }
 
 .b-welcome {
-  background: url(../media/content/b-welcome/bg-1.jpg) 100% 50% no-repeat;
-  background-size: contain;
+  /* background: url(../media/content/b-welcome/bg-1.jpg) 100% 50% no-repeat; */
+  background: url(../media/content/b-main-slider/bg-1.jpg) 100% 50% no-repeat;
+  background-size: cover;
 }
 
 .b-welcome-list {
