@@ -21,12 +21,12 @@
 -------------------------------------------------------------------*/
 /* ======= GLOBAL ======= */
 body {
-  font: 15px/1.6 'Lato';
+  font: 15px/1.6 'Arial';
 }
 
 .l-theme {
   position: relative;
-  max-width: 1920px;
+  /* max-width: 1920px; */
   margin: auto;
   background-color: #fff;
   overflow-x: hidden;
@@ -3634,6 +3634,7 @@ body {
   color: #253241;
   text-align: center;
   text-transform: uppercase;
+  line-height: 22px;
 }
 
 .b-welcome-list__item:not(:last-child) {
