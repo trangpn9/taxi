@@ -55,7 +55,7 @@ body {
 }
 
 .ui-title {
-  color: #222222;
+  color: #11864B;
   font: 700 40px Montserrat;
   margin-bottom: 19px;
 }
@@ -629,7 +629,7 @@ blockquote cite {
 }
 
 .bg-dark {
-  background-color: #253241;
+  background-color: #11864B;
 }
 
 .bg-light {
@@ -972,9 +972,23 @@ body {
   font-weight: 900;
   color: #fff;
 }
+.b-bnr-contacts__phone.btn-primary {
+  padding: 8px 30px;
+}
 
 .b-bnr-contacts__phone:hover {
   text-decoration: none;
+}
+
+.b-isotope-filter li.current a,
+.b-bnr-contacts__phone.btn.btn-primary span,
+.b-bnr-contacts__phone.btn.btn-primary span i {
+  color: red !important;
+}
+
+.b-bnr-contacts__phone.btn.btn-primary:hover span,
+.b-bnr-contacts__phone.btn.btn-primary:hover span i { 
+  color: #fff !important;
 }
 
 .b-brands__item {
@@ -1801,7 +1815,7 @@ body {
 
 
 .b-goods-f:not(.b-goods-f_row).b-goods-f_dark .b-goods-f__main {
-  background-color: #34404e;
+  background-color: #11864B;
 }
 
 .b-goods-f:not(.b-goods-f_row).b-goods-f_dark .b-goods-f__title {
@@ -3653,8 +3667,8 @@ body {
   position: relative;
   padding-top: 75px;
   padding-bottom: 75px;
-  color: #a9aeb3;
-  background-color: #121820;
+  color: #fff;
+  background-color: #11864B;
 }
 
 .footer__btn-up {

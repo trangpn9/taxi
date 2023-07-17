@@ -458,7 +458,7 @@ html [data-off-canvas*=open] {
   background: #FFF;
 }
 .top-bar {
-  background-color: #253241;
+  background-color: #11864B;
   height: 55px;
   transition: all .3s;
   overflow: hidden;
@@ -483,7 +483,7 @@ html [data-off-canvas*=open] {
   right: 100%;
   border-style: solid;
   border-width: 28px;
-  border-color: #253241 #253241 transparent transparent;
+  border-color: #11864B #11864B transparent transparent;
   bottom: 0;
   top: -1px;
   background-color: #FFF;
@@ -542,7 +542,7 @@ html [data-off-canvas*=open] {
     display: block;
     font-size: 18px;
     font-weight: 900;
-    color: #222222 !important;
+    color: #11864B !important;
     white-space: nowrap;
     margin-top: 6px;
     text-decoration: none !important;
