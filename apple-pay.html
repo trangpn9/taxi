@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apple Pay - Product Page</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div class="row mt-3">
+      <div class="col-md-12 text-center">
+        <h3 id="titleWC">Apple Pay - Product Page</h3>
+        <a href="#" id="btn-setup-apple-pay" class="btn btn-dark">
+          Set up Apple Pay
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // decodeURIComponent(uri);
+
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+
+    const btnSetupApplePay = document.getElementById('btn-setup-apple-pay');
+    const titleWelcome = document.getElementById('titleWC');
+
+    if (urlParams.has('device') && urlParams.has('lang') && urlParams.has('callback')) {
+      const device = urlParams.get('device');
+      const lang = urlParams.get('lang');
+      const callback = urlParams.get('callback');
+
+      if (lang === 'vi') {
+        titleWelcome.innerHTML = "Chào mừng đến với Apple Pay!";
+        btnSetupApplePay.innerHTML = "Cài đặt Apple Pay";
+      } else {
+        titleWelcome.innerHTML = "Welcome to Apple Pay!";
+        btnSetupApplePay.innerHTML = "Set up Apple Pay";
+      }
+
+      btnSetupApplePay.setAttribute("href", callback);
+    }
+
+  </script>
+</body>
+
+</html>
