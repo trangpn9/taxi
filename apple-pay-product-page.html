@@ -10868,13 +10868,15 @@
         const welcomeSec = document.getElementById("welcomeSec");
         const btnSetupApplePay = document.getElementById("btn-setup-apple-pay");
 
-        const encodeUrlAppleSupport = "https%3A%2F%2Fsupport.apple.com";
         // Apple Pay Supported device
         const viUrlSupportDevice = "&url=https%3A%2F%2Fsupport.apple.com%2Fvi-vn%2FHT208531";
         const enUrlSupportDevice = "&url=https%3A%2F%2Fsupport.apple.com%2Fen-us%2FHT201472";
         // If I lost my device
         const viLostDevice = "&url=https%3A%2F%2Fsupport.apple.com%2Fvi-vn%2FHT201472";
         const enLostDevice = "&url=https%3A%2F%2Fsupport.apple.com%2Fen-us%2FHT201472";
+        // Link where apple pay
+        const viWhereApplePay = "&url=https%3A%2F%2Ftechcombank.com%2Fkhach-hang-ca-nhan%2Fchi-tieu%2Fthe%2Fthanh-toan-voi-apple-pay";
+        const enWhereApplePay = "&url=https%3A%2F%2Ftechcombank.com%2Fkhach-hang-ca-nhan%2Fchi-tieu%2Fthe%2Fthanh-toan-voi-apple-pay";
 
         // Element Language box welcome
         const welcomeIntro = document.getElementById("welcomeIntro");
@@ -10964,16 +10966,16 @@
 
             if (lang === "vi") {
                 linkSupportedDevice.setAttribute("href", urlCallback + viUrlSupportDevice);
-                linkWhereModal.setAttribute("href", urlCallback);
+                linkWhereModal.setAttribute("href", urlCallback + viWhereApplePay);
                 linkWhatDecice.setAttribute("href", urlCallback + viLostDevice);
             } else {
                 linkSupportedDevice.setAttribute("href", urlCallback + enUrlSupportDevice);
-                linkWhereModal.setAttribute("href", urlCallback);
+                linkWhereModal.setAttribute("href", urlCallback + enWhereApplePay);
                 linkWhatDecice.setAttribute("href", urlCallback + enLostDevice);
             }
         } else {
             linkSupportedDevice.setAttribute("href", urlCallback + enUrlSupportDevice);
-            linkWhereModal.setAttribute("href", urlCallback);
+            linkWhereModal.setAttribute("href", urlCallback + enWhereApplePay);
             linkWhatDecice.setAttribute("href", urlCallback + enLostDevice);
         }
 
