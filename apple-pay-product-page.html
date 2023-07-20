@@ -10869,6 +10869,12 @@
         const btnSetupApplePay = document.getElementById("btn-setup-apple-pay");
 
         const encodeUrlAppleSupport = "https%3A%2F%2Fsupport.apple.com";
+        // Apple Pay Supported device
+        const viUrlSupportDevice = "%26url%3Dhttps%3A%2F%2Fsupport.apple.com%2Fvi-vn%2FHT208531";
+        const enUrlSupportDevice = "%26url%3Dhttps%3A%2F%2Fsupport.apple.com%2Fen-us%2FHT201472";
+        // If I lost my device
+        const viLostDevice = "%26url%3Dhttps%3A%2F%2Fsupport.apple.com%2Fvi-vn%2FHT201472";
+        const enLostDevice = "%26url%3Dhttps%3A%2F%2Fsupport.apple.com%2Fen-us%2FHT201472";
 
         // Element Language box welcome
         const welcomeIntro = document.getElementById("welcomeIntro");
@@ -10952,12 +10958,23 @@
         const desFaceId = document.getElementById("des-face-id");
 
         // Handle external link: linkSupportedDevice linkWhereModal linkWhatDecice
-        if (urlParams.has("url-callback")) {
+        if (urlParams.has("lang") && urlParams.has("url-callback")) {
+            const lang = urlParams.get("lang");
             const urlCallback = urlParams.get("url-callback");
-            const urlAppleSupport = urlCallback + "&url=" + encodeUrlAppleSupport;
-            linkSupportedDevice.setAttribute("href", urlAppleSupport);
-            linkWhereModal.setAttribute("href", urlAppleSupport);
-            linkWhatDecice.setAttribute("href", urlAppleSupport);
+
+            if (lang === "vi") {
+                linkSupportedDevice.setAttribute("href", urlCallback + viUrlSupportDevice);
+                linkWhereModal.setAttribute("href", urlCallback);
+                linkWhatDecice.setAttribute("href", urlCallback + viLostDevice);
+            } else {
+                linkSupportedDevice.setAttribute("href", urlCallback + enUrlSupportDevice);
+                linkWhereModal.setAttribute("href", urlCallback);
+                linkWhatDecice.setAttribute("href", urlCallback + enLostDevice);
+            }
+        } else {
+            linkSupportedDevice.setAttribute("href", urlCallback + enUrlSupportDevice);
+            linkWhereModal.setAttribute("href", urlCallback);
+            linkWhatDecice.setAttribute("href", urlCallback + enLostDevice);
         }
 
 
