@@ -3665,8 +3665,8 @@ body {
 
 .footer__btn-up {
   position: absolute;
-  right: 20px;
-  bottom: 70px;
+  right: 5px;
+  bottom: 210px;
   cursor: pointer;
   text-align: center;
 }
