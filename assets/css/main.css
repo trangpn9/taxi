@@ -5119,3 +5119,15 @@ html .btn-border:hover {
   vertical-align: middle !important;
   text-align: center;
 }
+
+div#hotlineTell {
+  position: fixed;
+  bottom: 160px;
+  right: 15px;
+}
+
+div#zaloChat {
+  position: fixed;
+  bottom: 90px;
+  right: 15px;
+}
